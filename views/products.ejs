@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+<div class='container'>
+	<header class='jumbotron'>
+		<div class='container'>
+			<h1>Products Page!</h1>
+			<p>Check out our most recommended products</p>
+			<a class='btn btn-primary btn-lg' href='/products/new'>Add a new product</a>
+		</div>
+	</header>
+
+    <div class='row' style='display: flex; flex-wrap:wrap;'>
+		<% products.forEach(function(product){ %>
+			<div class='col-md-3 col-sm-6'>
+				<div class='thumbnail'>
+					<img src=" <%= product.image %> ">	
+					<div class='caption'>
+						<a href="/product/<%= product.id %>"><h4><%= product.name %></h4></a>
+					</div>
+				</div>
+			</div>
+		<% }); %>	
+	</div>	
+</div>
+
+<%- include("partials/footer") %>
