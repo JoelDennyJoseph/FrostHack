@@ -74,7 +74,14 @@ app.get('/products', function(req, res){
 app.post('/products', function(req, res){
 	var name = req.body.name;
 	var image = req.body.image;
-	var product = { name: name, image:image }
+	var desc = req.body.description;
+	var id = Math.floor(Math.random() * 10000) + 1; 
+
+	var product = { 
+	name: name, 
+	image:image , 
+	description: description,
+	id: newid }
 	products.push(product);
 	
 	res.redirect('/products');
