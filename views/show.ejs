@@ -4,9 +4,11 @@
 
 <div class="container">
     <p> <%= product.name %> </p>
-    <img src=" <%= product.image %> ">	
+    <img src=" <%= product.image %> ">
     <p> <%= product.description %> </p>
-    <button>Chat with <%= product.user %> </button> 
+    <a href="/videoRoom">
+        <button>Chat with <%= product.user %> </button>
+    </a>
 </div>
 
 <%- include("partials/footer") %>
