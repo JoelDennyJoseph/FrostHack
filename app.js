@@ -75,12 +75,12 @@ app.post('/products', function(req, res){
 	var name = req.body.name;
 	var image = req.body.image;
 	var desc = req.body.description;
-	var id = Math.floor(Math.random() * 10000) + 1; 
+	var newid = Math.floor(Math.random() * 10000) + 1; 
 
 	var product = { 
 	name: name, 
 	image:image , 
-	description: description,
+	description: desc,
 	id: newid }
 	products.push(product);
 	
