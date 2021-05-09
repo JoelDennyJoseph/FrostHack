@@ -81,6 +81,7 @@ var products = [{
 
 app.get('/', function (req, res) {
 	res.render('home');
+	currentUser = [];
 });
 
 app.get('/products', function (req, res) {

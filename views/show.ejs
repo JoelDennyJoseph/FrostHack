@@ -1,14 +1,32 @@
 <%- include("partials/header") %>
 
-<a href='/products'>Go Back</a>
-
 <div class="container">
-    <p> <%= product.name %> </p>
-    <img src=" <%= product.image %> ">
+    <H1 style="text-align: center;"> <%= product.name %> </H1>
+    <img src=" <%= product.image %> " 
+    style="border: 1px solid #ddd; 
+    border-radius: 4px; 
+    display: block;
+    padding: 5px; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height:50%;
+    ">
+    <div 
+    style="border: 1px solid #ddd; 
+    border-radius: 4px;
+    display: block;
+    padding: 5px; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;">
     <p> <%= product.description %> </p>
     <a href="/videoRoom">
-        <button>Chat with <%= product.user %> </button>
+        <button class='btn btn-lg btn-primary btn-block'>
+        Chat with <%= product.user %> 
+        </button>
     </a>
+    </div>
 </div>
 
 <%- include("partials/footer") %>
